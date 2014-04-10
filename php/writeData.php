@@ -1,13 +1,13 @@
 <?php
 include("db_connect.php");
 
-if($_GET["weight"] == "") die('Parameter "weight" is missing.');
+if($_POST["weight"] == "") die('Parameter "weight" is missing.');
 $weight = mysql_real_escape_string($_GET["weight"]);
 
-if($_GET["size"] == "") die('Parameter "size" is missing.');
+if($_POST["size"] == "") die('Parameter "size" is missing.');
 $size = mysql_real_escape_string($_GET["size"]);
 
-if($_GET["user_id"] == "") die('Parameter "user_id" is missing.');
+if($_POST["user_id"] == "") die('Parameter "user_id" is missing.');
 $user_id = mysql_real_escape_string($_GET["user_id"]);
 
 
@@ -16,4 +16,4 @@ $sql = "";
 
 
 
-mysql_close();
+mysqli_close($con);

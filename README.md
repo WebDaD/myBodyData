@@ -17,7 +17,7 @@ For now, this is only weight and size (from your abdomen).
 - [X] Basic JS Framework
 - [X] Basic Design
 - [ ] Enter Data
-- [ ] Login
+- [X] Login
 - [X] Register
 - [ ] Edit Password
 - [ ] Function Test
