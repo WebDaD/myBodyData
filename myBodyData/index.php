@@ -12,6 +12,8 @@
 		<title><?php echo $TITLE;?></title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<script src="js/jquery-1.11.0.min.js" type="text/javascript" ></script>
+		<script src="js/jquery.session.js" type="text/javascript" ></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" ></script>
 		<script src="js/main.js" type="text/javascript" ></script>
 	</head>
 	<body>
@@ -30,7 +32,7 @@
 				<span id="btn_submitdata">Submit</span><!-- TODO: centered -->
 			</div>
 			<div id="thank_you">
-				<h1>Thank you for the Input! Data Reading will be avaible soon.</h1> <!-- TODO: centered -->
+				<h1>Thank you for the Input! Data Reading will be avaiable soon.</h1> <!-- TODO: centered -->
 			</div>
 			<div id="login">
 				<h1>Please Login</h1> <!-- TODO: centered -->
