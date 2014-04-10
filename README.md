@@ -12,7 +12,8 @@ myBodyData
 # MileStones
 
 ## 1 (Alpha) YYYY-MM-DD:
-- [ ] Basic Framework
+- [X] Basic HTML Framework
+- [ ] Basic JS Framework
 - [ ] Basic Design
 - [ ] Enter Data
 - [ ] Login

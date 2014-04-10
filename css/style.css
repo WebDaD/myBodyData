@@ -1,2 +1,26 @@
 @CHARSET "ISO-8859-1";
 /* Green: 00cf2c      white  */
+
+body{} /*TODO: bg-color*/
+
+#header{background-color:black;position:fixed;top:0px;height:50px;width:100%;}
+#header #logo{} /*TODO: float left*/
+#header #logo img{height:48px;} 
+#header #headline{} /*TODO: float left, color green*/
+#header #powered{} /*TODO: float right, color green*/
+#header #wdlogo{} /*TODO: float right*/
+#header #wdlogo a img{height:48px;} 
+
+#content {width:60%;margin: 0 auto;} /*TODO: bg-color*/
+#content * h1{} /*TODO: color green, bold, big*/
+#content * .tinput{} /*TODO: border green, round*/
+#content * .tinput:focus{} /*TODO: border darker green, shadow green*/
+#content * .button{} /*TODO: bg green, color white, round*/
+#content * .button:hover{} /*TODO: bg darker green, shadow green*/
+
+#footer{background-color:black;position:fixed;bottom:0px;height:50px;width:100%;}
+#footer #impressum{} /*TODO: float left*/
+#footer #impressum a{} /*TODO: color white*/
+#footer #impressum a:hover{} /*TODO: shadow green*/
+#footer #webdad{} /*TODO: float right*/
+#footer #webdad a img{height:48px;} 
