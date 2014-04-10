@@ -17,8 +17,9 @@ myBodyData
 - [X] Basic Design
 - [ ] Enter Data
 - [ ] Login
-- [ ] Register
+- [X] Register
 - [ ] Edit Password
+- [ ] Function Test
 
 ## 2 (Beta) YYYY-MM-DD:
 - [ ] Display Data Table

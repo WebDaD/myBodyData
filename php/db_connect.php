@@ -12,8 +12,7 @@
  */
 include("../config.php");
 
-mysql_connect($DB["server"], $DB["user"], $DB["password"]) or die("Unable to reach Database, check User");
-mysql_select_db($DB["database"]) or die("Unable to reach specific Database, check Database");
+$con = mysqli_connect($DB["server"], $DB["user"], $DB["password"],$DB["database"]) or die("Unable to reach Database, check User");
 
-mysql_query("SET NAMES utf8");
+mysqli_query($con, "SET NAMES utf8");
 ?>

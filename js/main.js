@@ -43,9 +43,13 @@ $( document ).ready(function() {
 	    	if(error)return;
 	    	$.post( "php/register.php", { username: $("#username").val(), email: $("#email").val() })
 	    		.done(function( data ) {
+	    			if(data==0){
 	    			alert("An E-Mail has been sent to the adress you provided, containing the password.");
 	    			$("#register").fadeOut("slow");
 	    			$("#login").fadeIn("slow");
+	    			} else {
+	    				alert(data);
+	    			}
 	    	});
 	 });
 
