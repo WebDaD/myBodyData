@@ -13,10 +13,12 @@ myBodyData
 
 ## 1 (Alpha) YYYY-MM-DD:
 - [X] Basic HTML Framework
-- [ ] Basic JS Framework
+- [X] Basic JS Framework
 - [X] Basic Design
 - [ ] Enter Data
 - [ ] Login
+- [ ] Register
+- [ ] Edit Password
 
 ## 2 (Beta) YYYY-MM-DD:
 - [ ] Display Data Table

@@ -14,6 +14,7 @@
 		<script src="js/jquery-1.11.0.min.js" type="text/javascript" ></script>
 		<script src="js/jquery.session.js" type="text/javascript" ></script>
 		<script src="js/jquery.cookie.js" type="text/javascript" ></script>
+		<script src="js/jquery.md5.js" type="text/javascript" ></script>
 		<script src="js/main.js" type="text/javascript" ></script>
 	</head>
 	<body>
@@ -26,9 +27,10 @@
 		<div id="content">
 			<div id="input_data">
 				<h1>Welcome to myBodyData!</h1> 
-				<input class="tinput" id="weight" name="weight" type="text" placeholder="Weight"/> 
-				<input class="tinput" id="size" name="size" type="text" placeholder="Size"/>  
+				<input class="tinput" id="weight" name="weight" type="number" placeholder="Weight" min="0" step="any"/> 
+				<input class="tinput" id="size" name="size" type="number" placeholder="Size" min="0" step="any"/>  
 				<span class="button" id="btn_submitdata">Submit</span>
+				<span class="mini_button" id="btn_display_password">Edit Password</span>
 			</div>
 			<div id="thank_you">
 				<h1>Thank you for the Input! Data Reading will be avaiable soon.</h1>
@@ -38,6 +40,20 @@
 				<input class="tinput" id="user" name="user" type="text" placeholder="Username"/>  
 				<input class="tinput" id="password" name="password" type="password" placeholder="Password"/>
 				<span class="button" id="btn_login">Submit</span>
+				<span class="mini_button" id="btn_display_register">Register</span>
+			</div>
+			<div id="register">
+				<h1>Please Register</h1>
+				<input class="tinput" id="email" name="email" type="email" placeholder="E-Mail"/>  
+				<input class="tinput" id="username" name="username" type="text" placeholder="Username"/>
+				<span class="button" id="btn_register">Submit</span>
+			</div>
+			<div id="edit_password">
+				<h1>Please Enter Data</h1>
+				<input class="tinput" id="old_pwd" name="old_pwd" type="password" placeholder="Old Password"/>  
+				<input class="tinput" id="new_pwd" name="new_pwd" type="password" placeholder="New Password"/>
+				<input class="tinput" id="rep_pwd" name="rep_pwd" type="password" placeholder="Repeat"/>
+				<span class="button" id="btn_password">Submit</span>
 			</div>
 		</div>
 		<div id="footer">

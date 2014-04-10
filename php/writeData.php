@@ -7,8 +7,13 @@ $weight = mysql_real_escape_string($_GET["weight"]);
 if($_GET["size"] == "") die('Parameter "size" is missing.');
 $size = mysql_real_escape_string($_GET["size"]);
 
-//date now
+if($_GET["user_id"] == "") die('Parameter "user_id" is missing.');
+$user_id = mysql_real_escape_string($_GET["user_id"]);
 
-//user_id form session
+
+$sql = "";
+//date now (SQL)
+
+
 
 mysql_close();
