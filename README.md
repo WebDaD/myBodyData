@@ -14,7 +14,7 @@ myBodyData
 ## 1 (Alpha) YYYY-MM-DD:
 - [X] Basic HTML Framework
 - [ ] Basic JS Framework
-- [ ] Basic Design
+- [X] Basic Design
 - [ ] Enter Data
 - [ ] Login
 
