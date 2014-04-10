@@ -1,7 +1,8 @@
 myBodyData
 ===========
 
-
+A Simple Website in HTML 5 with a Database to track body data.
+For now, this is only weight and size (from your abdomen).
 
 # Legend
 - + = Added
