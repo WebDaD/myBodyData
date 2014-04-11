@@ -4,6 +4,8 @@ myBodyData
 A Simple Website in HTML 5 with a Database to track body data.
 For now, this is only weight and size (from your abdomen).
 
+Safe Passwords are used: http://alias.io/2010/01/store-passwords-safely-with-php-and-mysql/
+
 # Legend
 - + = Added
 - - = Removed
@@ -16,10 +18,10 @@ For now, this is only weight and size (from your abdomen).
 - [X] Basic HTML Framework
 - [X] Basic JS Framework
 - [X] Basic Design
-- [ ] Enter Data
+- [X] Enter Data
 - [X] Login
 - [X] Register
-- [ ] Edit Password
+- [X] Edit Password
 - [ ] Function Test
 
 ## 2 (Beta) YYYY-MM-DD:
@@ -30,3 +32,6 @@ For now, this is only weight and size (from your abdomen).
 - [ ] Display Charts
 - [ ] Nice Desing
 
+
+# LICENSE
+GPL (see File LICENSE)

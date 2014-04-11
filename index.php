@@ -34,6 +34,7 @@
 			</div>
 			<div id="thank_you">
 				<h1>Thank you for the Input! Data Reading will be avaiable soon.</h1>
+				<p id="results"></p>
 			</div>
 			<div id="login">
 				<h1>Please Login</h1>

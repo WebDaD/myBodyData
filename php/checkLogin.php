@@ -3,10 +3,10 @@
 include("db_connect.php");
 
 if($_POST["user"] == "") die('Parameter "user" is missing.');
-$user = mysql_real_escape_string($_GET["user"]);
+$user = mysql_real_escape_string($_POST["user"]);
 
 if($_POST["password"] == "") die('Parameter "password" is missing.');
-$password = mysql_real_escape_string($_GET["password"]);
+$password = mysql_real_escape_string($_POST["password"]);
 
 $sql = "SELECT id, hash FROM mdb_users WHERE username='"+$user+"'";
 $res = mysqli_query($con,$sql);

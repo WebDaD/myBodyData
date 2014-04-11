@@ -2,10 +2,10 @@
 
 
 if($_POST["email"] == "") die('Parameter "email" is missing.');
-$email = mysql_real_escape_string($_GET["email"]);
+$email = mysql_real_escape_string($_POST["email"]);
 
 if($_POST["username"] == "") die('Parameter "username" is missing.');
-$username = mysql_real_escape_string($_GET["username"]);
+$username = mysql_real_escape_string($_POST["username"]);
 
 $password = randomPassword(8);
 $md5_password = md5($password);

@@ -112,7 +112,7 @@ $( document ).ready(function() {
 	    	}
 	    	
 	    	if(error)return;
-	    	$.post( "php/edit_passwd.php", { old_pwd: $.md5($("#old_pwd").val()), new_pwd: $.md5($("#new_pwd").val()) })
+	    	$.post( "php/edit_passwd.php", { old_pwd: $.md5($("#old_pwd").val()), new_pwd: $.md5($("#new_pwd").val()), user_id:$.session.get("mbd_user_id") })
 	    		.done(function( data ) {
 	    			if(data == 0){ //Pwd has been changed
 	    				alert("Your password has been changed.");
@@ -126,7 +126,7 @@ $( document ).ready(function() {
 	    	});
 	 });
 	 
-	 $('#content').on('click', '#btn_login', function(evt) {
+	 $('#content').on('click', '#btn_submitdata', function(evt) {
 	    	evt.preventDefault();
 	    	var error = false;
 	    	$("#weight").removeClass("error");
@@ -144,8 +144,9 @@ $( document ).ready(function() {
 	    	if(error)return;
 	    	$.post( "php/writeData.php", { weight: $("#weight").val(), size: $("#size").val(), user_id:$.session.get("mbd_user_id") })
 	    		.done(function( data ) {
-	    			if(data == 0){ //All OK
+	    			if(data != 1){ //All OK
 	    				$("#input_data").fadeOut("slow");
+	    				$("#results").html(data);
 	    				$("#thank_you").fadeIn("slow");
 	    			} else { //Error
 	    				$("#size").addClass("error");
