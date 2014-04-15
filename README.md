@@ -31,8 +31,8 @@ Safe Passwords are used: http://alias.io/2010/01/store-passwords-safely-with-php
 - [ ] FOrgot Passwd
 - [ ] Navigation (Slide in from left, click on stripers upper left)
 - [ ] Charts
-- [ ] New Design (Gray Background, modern top and lower parts)
-- [ ] Redesign Logo
+- [X] New Design (Gray Background, modern top and lower parts)
+- [X] Redesign Logo
 
 ## 3 (Release) YYYY-MM-DD
 - [ ] BugFixing
