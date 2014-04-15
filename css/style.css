@@ -5,9 +5,9 @@ darker-green:004F11
 white  
  */
 
-body{margin:0px;padding:0px;background: #BBF1B6;}
+body{margin:0px;padding:0px;background: #BBF1B6;} /*TODO: Nice BG*/
 
-#header{background-color:black;position:fixed;top:0px;height:50px;width:100%;min-width:320px;}
+#header{background-color:black;position:fixed;top:0px;height:50px;width:100%;min-width:320px;} /*TODO: white-grey grad, border-bottom+shadow, black font*/
 #header #logo{float:left;} 
 #header #logo img{height:48px;} 
 #header #headline{float:left; color:#00cf2c;display:inline-block; vertical-align:middle;height:50px;line-height:50px;font-size:1.9em;}/*TODO: Nice Font, little margin-left*/
@@ -33,7 +33,7 @@ body{margin:0px;padding:0px;background: #BBF1B6;}
 #register{display:none;}
 #edit_password{display:none;}
 
-#footer{background-color:black;position:fixed;bottom:0px;height:50px;width:100%;}
+#footer{background-color:black;position:fixed;bottom:0px;height:50px;width:100%;} /*TODO: white-grey grad, border-bottom+shadow, black font*/
 #footer #impressum{margin-left:5px;float:left;color:white;text-decoration:none;display:inline-block; vertical-align:middle;height:50px;line-height:50px;} 
 #footer #impressum:hover{text-shadow: 0 0 5px 00cf2c;-webkit-transition: all 250ms ease-in-out;-moz-transition: all 250ms ease-in-out;-ms-transition: all 250ms ease-in-out;-o-transition: all 250ms ease-in-out;transition: all 250ms ease-in-out;} /*TODO: doenst work yet*/
 #footer #webdad{float:right;} 

@@ -14,7 +14,7 @@ Safe Passwords are used: http://alias.io/2010/01/store-passwords-safely-with-php
 
 # MileStones
 
-## 1 (Alpha) YYYY-MM-DD:
+## 1 (Alpha) 2014-04-15:
 - [X] Basic HTML Framework
 - [X] Basic JS Framework
 - [X] Basic Design
@@ -29,10 +29,15 @@ Safe Passwords are used: http://alias.io/2010/01/store-passwords-safely-with-php
 - [ ] Display Data Table
 - [ ] Display interesting values
 - [ ] FOrgot Passwd
+- [ ] Navigation (Slide in from left, click on stripers upper left)
+- [ ] Charts
+- [ ] New Design (Gray Background, modern top and lower parts)
+- [ ] Redesign Logo
 
 ## 3 (Release) YYYY-MM-DD
-- [ ] Display Charts
-- [ ] Nice Desing
+- [ ] BugFixing
+- [ ] Sharing
+- [ ] DonateButton
 
 
 # LICENSE
