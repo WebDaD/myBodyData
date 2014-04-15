@@ -1,39 +1,42 @@
 <?php
-
+include("db_connect.php");
 
 if($_POST["email"] == "") die('Parameter "email" is missing.');
-$email = mysql_real_escape_string($_POST["email"]);
+$email = mysqli_real_escape_string($con, $_POST["email"]);
 
 if($_POST["username"] == "") die('Parameter "username" is missing.');
-$username = mysql_real_escape_string($_POST["username"]);
+$username = mysqli_real_escape_string($con, $_POST["username"]);
 
 $password = randomPassword(8);
 $md5_password = md5($password);
 
-include("db_connect.php");
+
 
 $cost = 10;
 $salt = strtr(base64_encode(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)), '+', '.');
 $salt = sprintf("$2a$%02d$", $cost) . $salt;
 $hash = crypt($md5_password, $salt);
 
-if(mysqli_num_rows(mysqli_query($con, "SELECT id FROM mdb_users WHERE email='"+$email+"'"))>0){
+$res = mysqli_query($con, "SELECT id FROM mbd_users WHERE email='".$email."'");
+if($res != false && mysqli_num_rows($res)>0){
 	mysqli_close($con);
 	die("E-Mail is already in use");
 }
-if(mysqli_num_rows(mysqli_query($con, "SELECT id FROM mdb_users WHERE username='"+$username+"'"))>0){
+$res = mysqli_query($con, "SELECT id FROM mbd_users WHERE username='".$username."'");
+if($res != false && mysqli_num_rows($res)>0){
 	mysqli_close($con);
 	die("Username is already in use");
 }
 
-$sql = "INSERT INTO mdb_users (username, hash, email) VALUES ('"+$username+"', '"+$hash+"', '"+$email+"')";
+$sql = "INSERT INTO mbd_users (username, hash, email) VALUES ('".$username."', '".$hash."', '".$email."')";
 $check = mysqli_query($con, $sql);
-mysqli_close($con);
-if($check != TRUE){
-	die("Error writing Data into Database.");
+if($check == FALSE){
+	$err = mysqli_error($con);
+	mysqli_close($con);
+	die("Error writing Data into Database:<br/>\n".$err);
 }
 
-$msg = "Welcome "+$username+",\n";
+$msg = "Welcome ".$username.",\n";
 $msg .= "Thank you for registering to myBodyData!\n";
 $msg .= "Your temporary Password is:\n\n";
 $msg .= $password;
@@ -41,7 +44,11 @@ $msg .= "\n\nYou should Change it on your first Login.\n\n";
 $msg .= "Have Fun!\n";
 $msg .= $AUTHOR;
 
-$check = mail($email,$TITLE,$msg);
+$header = 'From: '.$MAIL . "\r\n" .
+		'Reply-To:'.$MAIL . "\r\n" .
+		'X-Mailer: PHP/' . phpversion();
+
+$check = mail($email,$TITLE,$msg, $header);
 if($check != TRUE){
 	die("Error sending E-Mail.");
 }

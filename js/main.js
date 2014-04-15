@@ -1,17 +1,28 @@
 /**
  * 
  */
+//TODO: Replace FadeIn with nicer animation (from right, to left)
+//TODO: Submit on Enter on passwd and size and pwd_rep and username
 $( document ).ready(function() {
 
 	if($.session.get('mbd_user_id') !== undefined || $.cookie('mbd_user_id') !== undefined){
 		
 		if($.session.get('mbd_user_id') === undefined){$.session.set('mbd_user_id', $.cookie('mbd_user_id'));}
-		if($.cookie('mbd_user_id') === undefined){$.cookie('mbd_user_id', $.session.get('mbd_user_id'), { expires: 7, path: '/' });}
+		if($.cookie('mbd_user_id') === undefined){$.cookie('mbd_user_id', $.session.get('mbd_user_id'), { expires: 7});}
 		
 		$("#login").hide();
 		$("#input_data").show();
 	} 
 
+	
+	$('#content').on('click', '#btn_logout', function(evt) {
+    	evt.preventDefault();
+    	$.removeCookie('mbd_user_id');
+    	$.session.remove('mbd_user_id');
+    	$.session.clear();
+		$("#input_data").fadeOut("slow");
+		$("#login").fadeIn("slow");
+	});
 	
 	 $('#content').on('click', '#btn_display_register', function(evt) {
 	    	evt.preventDefault();
@@ -24,7 +35,11 @@ $( document ).ready(function() {
 	    	$("#input_data").fadeOut("slow");
 	    	$("#edit_password").fadeIn("slow");
 	 });
-	
+	 $('#content').on('click', '#btn_cancel', function(evt) {
+	    	evt.preventDefault();
+	    	$("#edit_password").fadeOut("slow");
+	    	$("#input_data").fadeIn("slow");
+		});
 	 $('#content').on('click', '#btn_register', function(evt) {
 	    	evt.preventDefault();
 	    	var error = false;
@@ -69,16 +84,17 @@ $( document ).ready(function() {
 	    		error=true;
 	    	}
 	    	if(error)return;
-	    	$.post( "php/checkLogin.php", { user: $("#user").val(), pwd: $.md5($("#password").val()) })
+	    	$.post( "php/checkLogin.php", { user: $("#user").val(), password: $.md5($("#password").val()) })
 	    		.done(function( data ) {
-	    			if(data != 0){
-	    				$.session.set('mbd_user_id', data);
-	    				$.cookie('mbd_user_id', data, { expires: 7, path: '/' });
-	    				$("#login").fadeOut("slow");
-	    				$("#input_data").fadeIn("slow");
-	    			} else {
+	    			if(data.match("^Error")){
 	    				$("#user").addClass("error");
 	    				$("#password").addClass("error");
+	    				alert(data);
+	    			} else {
+	    				$.session.set('mbd_user_id', data);
+	    				$.cookie('mbd_user_id', data, { expires: 7 });
+	    				$("#login").fadeOut("slow");
+	    				$("#input_data").fadeIn("slow");
 	    			}
 	    	});
 	 });
@@ -119,6 +135,7 @@ $( document ).ready(function() {
 	    				$("#edit_password").fadeOut("slow");
 	    				$("#input_data").fadeIn("slow");
 	    			} else { //Error
+	    				alert(data);
 	    				$("#old_pwd").addClass("error");
 	    				$("#new_pwd").addClass("error");
 	    				$("#rep_pwd").addClass("error");
@@ -144,14 +161,14 @@ $( document ).ready(function() {
 	    	if(error)return;
 	    	$.post( "php/writeData.php", { weight: $("#weight").val(), size: $("#size").val(), user_id:$.session.get("mbd_user_id") })
 	    		.done(function( data ) {
-	    			if(data != 1){ //All OK
+	    			if(data.match("^Error")){ //Error
+	    				$("#size").addClass("error");
+	    				$("#weight").addClass("error");
+	    				alert(data);
+	    			} else { //All OK
 	    				$("#input_data").fadeOut("slow");
 	    				$("#results").html(data);
 	    				$("#thank_you").fadeIn("slow");
-	    			} else { //Error
-	    				$("#size").addClass("error");
-	    				$("#weight").addClass("error");
-	    				alert("An Error has occured during the Save.");
 	    			}
 	    	});
 	 });

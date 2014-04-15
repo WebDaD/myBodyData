@@ -7,7 +7,7 @@
 		<link rel="apple-touch-icon" sizes="72x72" href="img/logo-72.png" />
 		<link rel="apple-touch-icon" sizes="114x114" href="img/logo-114.png" />
 		<link rel="apple-touch-icon" sizes="144x144" href="img/logo-144.png" />
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" /> <!-- TODO: Remove white border -->
 		<meta name="viewport" content="width=device-width">
 		<title><?php echo $TITLE;?></title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -21,8 +21,7 @@
 		<div id="header">
 			<img id="logo" alt="<?php echo $TITLE;?>" src="img/logo-48.png"/> 
 			<span id="headline"><?php echo $TITLE;?> v<?php echo $VERSION;?></span> 
-			<span id="powered">powered by</span>	
-			<a id="wdlogo" href="http://webdad.eu/tools"><img alt="WebDaD-Tools" src="http://webdad.eu/images/logos/webdad_tools.png"/></a>	
+			<a id="wdlogo" href="http://webdad.eu/tools" target="_blank"><img alt="WebDaD-Tools" src="http://webdad.eu/images/logos/webdad_tools.png" title="powered by WebDaD-Tools"/></a>	
 		</div>
 		<div id="content">
 			<div id="input_data">
@@ -31,6 +30,7 @@
 				<input class="tinput" id="size" name="size" type="number" placeholder="Size" min="0" step="any"/>  
 				<span class="button" id="btn_submitdata">Submit</span>
 				<span class="mini_button" id="btn_display_password">Edit Password</span>
+				<span class="mini_button" id="btn_logout">Logout</span>
 			</div>
 			<div id="thank_you">
 				<h1>Thank you for the Input! Data Reading will be avaiable soon.</h1>
@@ -55,11 +55,12 @@
 				<input class="tinput" id="new_pwd" name="new_pwd" type="password" placeholder="New Password"/>
 				<input class="tinput" id="rep_pwd" name="rep_pwd" type="password" placeholder="Repeat"/>
 				<span class="button" id="btn_password">Submit</span>
+				<span class="mini_button" id="btn_cancel">Cancel</span>
 			</div>
 		</div>
 		<div id="footer">
-			<a id="impressum" href="http://webdad.eu/wd-impressum" >Impressum</a>	
-			<a id="webdad" href="http://webdad.eu/"><img alt="WebDaD" src="http://webdad.eu/templates/webdad/images/logo.png"/></a> 	
+			<a id="impressum" href="http://webdad.eu/wd-impressum" target="_blank">Impressum</a>	
+			<a id="webdad" href="http://webdad.eu/" target="_blank"><img alt="WebDaD" src="http://webdad.eu/templates/webdad/images/logo.png"/></a> 	
 		</div>
 	</body>
 </html>

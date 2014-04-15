@@ -5,27 +5,26 @@ darker-green:004F11
 white  
  */
 
-body{background-color:white;}
+body{margin:0px;padding:0px;background: #BBF1B6;}
 
-#header{background-color:black;position:fixed;top:0px;height:50px;width:100%;}
+#header{background-color:black;position:fixed;top:0px;height:50px;width:100%;min-width:320px;}
 #header #logo{float:left;} 
 #header #logo img{height:48px;} 
-#header #headline{float:left; color:#00cf2c;} 
-#header #powered{float:right;color:#00cf2c;} 
+#header #headline{float:left; color:#00cf2c;display:inline-block; vertical-align:middle;height:50px;line-height:50px;font-size:1.9em;}/*TODO: Nice Font, little margin-left*/
 #header #wdlogo{float:right;}
-#header #wdlogo a img{height:48px;} 
+#header #wdlogo img{height:48px;} 
 
-#content {width:60%;margin: 0 auto;text-align:center;}
-#content * h1{color:#00cf2c;font-weight:bold;font-size:2em;}
-#content * #results{font-weight:bold;font-size:2em;}
-#content * .tinput{-webkit-border-radius: 4px;border-radius: 4px; border:2px solid #00cf2c;font-size:1.5em;}
+#content {width:60%;margin: 0 auto;text-align:center;margin-top:55px;}
+#content * h1{color:#00cf2c;font-weight:bold;font-size:2em; width:100%;}
+#content * #results{font-weight:bold;font-size:2em;width:100%;}
+#content * .tinput{margin-bottom:20px;width:100%;-webkit-border-radius: 4px;border-radius: 4px; border:2px solid #00cf2c;font-size:1.5em;}
 #content * .tinput:focus{border:2px solid #004F11;-webkit-box-shadow: 0 0 5px 0 #00cf2c;box-shadow: 0 0 5px 0 #00cf2c;-webkit-transition: all 250ms ease-in-out;-moz-transition: all 250ms ease-in-out;-ms-transition: all 250ms ease-in-out;-o-transition: all 250ms ease-in-out;transition: all 250ms ease-in-out;}
-#content * .button{background-color:#00cf2c; color:white;-webkit-border-radius: 8px;border-radius: 8px;padding:8px;font-size:1.5em;}
+#content * .button{display:block;cursor:pointer;margin-bottom:20px;background-color:#00cf2c; color:white;-webkit-border-radius: 8px;border-radius: 8px;padding:8px;font-size:1.5em;}
 #content * .button:hover{background-color:#004F11;-webkit-box-shadow: 0 0 5px 0 #00cf2c;box-shadow: 0 0 5px 0 #00cf2c;-webkit-transition: all 250ms ease-in-out;-moz-transition: all 250ms ease-in-out;-ms-transition: all 250ms ease-in-out;-o-transition: all 250ms ease-in-out;transition: all 250ms ease-in-out;}
-#content * .mini_button{background-color:#00cf2c; color:white;-webkit-border-radius: 8px;border-radius: 8px;padding:8px;font-size:1.0em;}
+#content * .mini_button{cursor:pointer;margin-bottom:20px;background-color:#00cf2c; color:white;-webkit-border-radius: 8px;border-radius: 8px;padding:8px;font-size:0.8em;}
 #content * .mini_button:hover{background-color:#004F11;-webkit-box-shadow: 0 0 5px 0 #00cf2c;box-shadow: 0 0 5px 0 #00cf2c;-webkit-transition: all 250ms ease-in-out;-moz-transition: all 250ms ease-in-out;-ms-transition: all 250ms ease-in-out;-o-transition: all 250ms ease-in-out;transition: all 250ms ease-in-out;}
 
-.error{border:2px solid #800000;-webkit-box-shadow: 0 0 5px 0 red;box-shadow: 0 0 5px 0 red;}
+.error{border:2px solid #800000 !important;-webkit-box-shadow: 0 0 5px 0 red;box-shadow: 0 0 5px 0 red;} /*TODO: Make nice*/
 .good{color:#00cf2c;}
 .bad{color:#800000;}
 
@@ -35,8 +34,7 @@ body{background-color:white;}
 #edit_password{display:none;}
 
 #footer{background-color:black;position:fixed;bottom:0px;height:50px;width:100%;}
-#footer #impressum{float:left;} 
-#footer #impressum a{color:white;}
-#footer #impressum a:hover{text-shadow: 0 0 5px 00cf2c;-webkit-transition: all 250ms ease-in-out;-moz-transition: all 250ms ease-in-out;-ms-transition: all 250ms ease-in-out;-o-transition: all 250ms ease-in-out;transition: all 250ms ease-in-out;}
+#footer #impressum{margin-left:5px;float:left;color:white;text-decoration:none;display:inline-block; vertical-align:middle;height:50px;line-height:50px;} 
+#footer #impressum:hover{text-shadow: 0 0 5px 00cf2c;-webkit-transition: all 250ms ease-in-out;-moz-transition: all 250ms ease-in-out;-ms-transition: all 250ms ease-in-out;-o-transition: all 250ms ease-in-out;transition: all 250ms ease-in-out;} /*TODO: doenst work yet*/
 #footer #webdad{float:right;} 
-#footer #webdad a img{height:48px;} 
+#footer #webdad img{height:48px;} 

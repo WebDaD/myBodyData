@@ -12,7 +12,7 @@
  */
 include("../config.php");
 
-$con = mysqli_connect($DB["server"], $DB["user"], $DB["password"],$DB["database"]) or die("Unable to reach Database, check User");
+$con = mysqli_connect($DB["server"], $DB["user"], $DB["password"],$DB["database"]) or die("Unable to reach Database!");
 
 mysqli_query($con, "SET NAMES utf8");
 ?>

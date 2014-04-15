@@ -22,11 +22,13 @@ Safe Passwords are used: http://alias.io/2010/01/store-passwords-safely-with-php
 - [X] Login
 - [X] Register
 - [X] Edit Password
-- [ ] Function Test
+- [X] Function Test
+- [X] Logout
 
 ## 2 (Beta) YYYY-MM-DD:
 - [ ] Display Data Table
 - [ ] Display interesting values
+- [ ] FOrgot Passwd
 
 ## 3 (Release) YYYY-MM-DD
 - [ ] Display Charts
