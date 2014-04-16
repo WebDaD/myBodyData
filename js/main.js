@@ -14,31 +14,39 @@ $( document ).ready(function() {
 		$("#input_data").show();
 	} 
 
+	//TODO: btn_display_account
+	//TODO: btn_cancel_acc
+	//TODO: btn_save (account)
+	
+	//TODO: btn_display_forgot (pwd)
+	//TODO: btn_send_password
+	//TODO: btn_cancel_forgot
+	
+	
+	//TODO: btn_stats
 	
 	$('#content').on('click', '#btn_logout', function(evt) {
     	evt.preventDefault();
     	$.removeCookie('mbd_user_id');
     	$.session.remove('mbd_user_id');
     	$.session.clear();
-		$("#input_data").fadeOut("slow");
-		$("#login").fadeIn("slow");
+		$("#input_data").hide("slide",{direction:'right'},function(){$("#login").show("slide",{direction:'left'},500);});
 	});
 	
 	 $('#content').on('click', '#btn_display_register', function(evt) {
 	    	evt.preventDefault();
-	    	$("#login").fadeOut("slow");
-	    	$("#register").fadeIn("slow");
+	    	$("#login").hide("slide",{direction:'right'},500, function(){$("#register").show("slide",{direction:'left'},500);});
+	    	
 	 });
 	 
 	 $('#content').on('click', '#btn_display_password', function(evt) {
 	    	evt.preventDefault();
-	    	$("#input_data").fadeOut("slow");
-	    	$("#edit_password").fadeIn("slow");
+	    	$("#input_data").hide("slide",{direction:'left'},500, function(){$("#edit_password").show("slide",{direction:'right'},500);});
 	 });
 	 $('#content').on('click', '#btn_cancel', function(evt) {
 	    	evt.preventDefault();
-	    	$("#edit_password").fadeOut("slow");
-	    	$("#input_data").fadeIn("slow");
+	    	$("#edit_password").hide("slide",{direction:'right'},500, function(){$("#input_data").show("slide",{direction:'left'},500);});
+	    	
 		});
 	 $('#content').on('click', '#btn_register', function(evt) {
 	    	evt.preventDefault();
@@ -60,8 +68,8 @@ $( document ).ready(function() {
 	    		.done(function( data ) {
 	    			if(data==0){
 	    			alert("An E-Mail has been sent to the adress you provided, containing the password.");
-	    			$("#register").fadeOut("slow");
-	    			$("#login").fadeIn("slow");
+	    			$("#register").hide("slide",{direction:'left'},500, function(){$("#login").show("slide",{direction:'right'},500);});
+	    			
 	    			} else {
 	    				alert(data);
 	    			}
@@ -93,8 +101,8 @@ $( document ).ready(function() {
 	    			} else {
 	    				$.session.set('mbd_user_id', data);
 	    				$.cookie('mbd_user_id', data, { expires: 7 });
-	    				$("#login").fadeOut("slow");
-	    				$("#input_data").fadeIn("slow");
+	    				$("#login").hide("slide",{direction:'left'},500, function(){$("#input_data").show("slide",{direction:'right'},500);});
+	    				
 	    			}
 	    	});
 	 });
@@ -132,8 +140,8 @@ $( document ).ready(function() {
 	    		.done(function( data ) {
 	    			if(data == 0){ //Pwd has been changed
 	    				alert("Your password has been changed.");
-	    				$("#edit_password").fadeOut("slow");
-	    				$("#input_data").fadeIn("slow");
+	    				$("#edit_password").hide("slide",{direction:'right'},500, function(){$("#input_data").show("slide",{direction:'left'},500);});
+	    				
 	    			} else { //Error
 	    				alert(data);
 	    				$("#old_pwd").addClass("error");
@@ -157,7 +165,8 @@ $( document ).ready(function() {
 	    	if($("#size").val()==""){
 	    		$("#size").addClass("error");
 	    		error=true;
-	    	}
+	    	} 
+	    	//TODO: if size contains ',' -> '.' 
 	    	if(error)return;
 	    	$.post( "php/writeData.php", { weight: $("#weight").val(), size: $("#size").val(), user_id:$.session.get("mbd_user_id") })
 	    		.done(function( data ) {
@@ -166,9 +175,8 @@ $( document ).ready(function() {
 	    				$("#weight").addClass("error");
 	    				alert(data);
 	    			} else { //All OK
-	    				$("#input_data").fadeOut("slow");
 	    				$("#results").html(data);
-	    				$("#thank_you").fadeIn("slow");
+	    				$("#input_data").hide("slide",{direction:'left'},500, function(){$("#thank_you").show("slide",{direction:'right'},500);});
 	    			}
 	    	});
 	 });

@@ -16,7 +16,7 @@ $sql = "SELECT id, hash FROM mbd_users WHERE id='".$user_id."'";
 $res = mysqli_query($con,$sql);
 if($res != false && mysqli_num_rows($res)>0){
 	$row = mysqli_fetch_object($res);
-	if ( crypt($password, $row->hash) === $row->hash ) {
+	if ( crypt($old_pwd, $row->hash) === $row->hash ) {
 		//pwd correct
 		$cost = 10;
 		$salt = strtr(base64_encode(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)), '+', '.');

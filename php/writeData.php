@@ -27,19 +27,19 @@ if($check != TRUE){
 		mysqli_close($con);
 		$w_diff = floatval($row->weight) - floatval($weight);
 		$s_diff = floatval($row->size) - floatval($size);
-		$msg = "Difference to yesterday:<br/>";
+		$msg = "Difference to last day:<br/>";
 		$msg .= "Weight: ";
 		if($w_diff>0){
-			$msg .= "<span class=\"good\">- ".abs($w_diff)."</span>";
+			$msg .= "<span class=\"good\">- ".abs($w_diff)." kg</span>";
 		} else {
-			$msg .= "<span class=\"bad\">+ ".abs($w_diff)."</span>";
+			$msg .= "<span class=\"bad\">+ ".abs($w_diff)." kg</span>";
 		}
 		$msg.="<br/>";
 		$msg .= "Size: ";
 		if($s_diff>0){
-			$msg .= "<span class=\"good\">+ ".$s_diff."</span>";
+			$msg .= "<span class=\"good\">- ".$s_diff." cm</span>";
 		} else {
-			$msg .= "<span class=\"bad\">- ".$s_diff."</span>";
+			$msg .= "<span class=\"bad\">+ ".$s_diff." cm</span>";
 		}
 		echo $msg;
 	} else {

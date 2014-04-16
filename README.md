@@ -29,15 +29,20 @@ Safe Passwords are used: http://alias.io/2010/01/store-passwords-safely-with-php
 - [ ] Display Data Table
 - [ ] Display interesting values
 - [ ] FOrgot Passwd
-- [ ] Navigation (Slide in from left, click on stripers upper left)
+- [ ] Account Information and Data
+- [ ] Navigation (Slide in from left, click on stripers upper left, hide to left, white, black border right)
 - [ ] Charts
 - [X] New Design (Gray Background, modern top and lower parts)
 - [X] Redesign Logo
+- [X] Page Transitions
+- [ ] Keyboard Controls
 
 ## 3 (Release) YYYY-MM-DD
 - [ ] BugFixing
 - [ ] Sharing
 - [ ] DonateButton
+- [ ] Multilanguage
+- [ ] Swipe Controling
 
 
 # LICENSE
