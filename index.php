@@ -7,7 +7,7 @@
 		<link rel="apple-touch-icon" sizes="72x72" href="img/logo-72.png" />
 		<link rel="apple-touch-icon" sizes="114x114" href="img/logo-114.png" />
 		<link rel="apple-touch-icon" sizes="144x144" href="img/logo-144.png" />
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" /> <!-- TODO: Remove white border -->
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 		<meta name="viewport" content="width=device-width">
 		<title><?php echo $TITLE;?></title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
