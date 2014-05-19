@@ -42,13 +42,22 @@ Safe Passwords are used: http://alias.io/2010/01/store-passwords-safely-with-php
 - [ ] Validate Inputs (using jquery parsley)
 - [ ] Create StartupImage (http://stuffandnonsense.co.uk/blog/about/home-screen-icons-and-startup-screens)
 - [ ] AppCache for Offline Message (http://docs.webplatform.org/wiki/apis/appcache/ApplicationCache)
+- [ ] use WebStorage to save data locally while offline and use the Event Online to sync back to server
+- [ ] Create Start-Page
+- [ ] Redesign Navigation
 
-## 3 (Release) YYYY-MM-DD
+## 3 (Release) YYYY-MM-DD:
 - [ ] BugFixing
 - [ ] Sharing
 - [ ] DonateButton
 - [ ] Multilanguage
-- [ ] Swipe Controling
+- [ ] Swipe Controlling
+- [ ] Implement Analytics
+- [ ] Implement ClickHeat
+
+## 4 (Version2) YYYY-MM-DD:
+- [ ] Add "Water Drunk on Day"
+- [ ] Add "Calories for Day"
 
 
 # LICENSE
